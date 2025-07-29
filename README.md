@@ -28,4 +28,5 @@ Python (OpenCV, face_recognition)
 
 CSV for data logging
 
-Jupyter Notebook / Flask (optional interface)
+Jupyter Notebook / Flask 
+
