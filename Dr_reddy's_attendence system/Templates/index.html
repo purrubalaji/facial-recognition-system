@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home – Attendance System</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('{{ url_for("static", filename="bg/dr_reddys_bg.jpg") }}') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+      color: #f1c40f;
+      text-shadow: 2px 2px 5px black;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .actions a {
+      padding: 15px 30px;
+      background: #27ae60;
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+    .actions a:hover {
+      background: #1e8449;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Welcome to Facial Recognition<br>Attendance System</h1>
+    <div class="actions">
+      <a href="/register">➕ Register</a>
+      <a href="{{ url_for('take_attendance') }}">📷 Take Attendance</a>
+      <a href="/export">📥 Export data to Excel</a>
+      <a href="/exit">📥 Exit</a>
+    </div>
+  </div>
+</body>
+</html>
